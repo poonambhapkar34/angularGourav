@@ -59,8 +59,6 @@ export class SignupComponent {
   update(){
     let payload = {phoneNo : this.signUpForm.value.phoneNo}
     this.apiCall.updateRecord(this.userData.id,payload).subscribe((response:any)=>{
-      console.log(response);
-      
     })
   }
   checkPass(){
