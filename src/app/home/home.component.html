@@ -1,0 +1,13 @@
+<p>home works!</p>
+<button routerLink = "user">User</button>
+<button routerLink = "variables">Variables</button>
+<button routerLink = "dataBinding" >Data binding technics</button>
+<button routerLink = "forms" >Forms</button>
+<button routerLink = "electronics-section/ac" >Electronics Section</button>
+<button routerLink = "cloth" >cloth</button>
+<button (click)="userMod()">User Module</button>
+<button (click)="structuralDir()">structuralDir</button>
+<button (click)="userList()">Get User List</button>
+<div *ngFor="let data of userData">{{data.userName}}</div>
+
+

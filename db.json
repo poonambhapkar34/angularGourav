@@ -1,0 +1,37 @@
+{
+  "userDetails": [
+    {
+      "id": "b678",
+      "userName": "Pooja",
+      "phoneNo": "5555555555",
+      "password": "pooja@123",
+      "confirmPass": "pooja@123",
+      "TnC": true
+    },
+    {
+      "id": "8da6",
+      "userName": "Yash",
+      "phoneNo": "3333333333",
+      "password": "Yash@123",
+      "confirmPass": "Yash@123",
+      "TnC": true
+    },
+    {
+      "id": "b91e",
+      "userName": "omsai",
+      "phoneNo": "3333333333",
+      "password": "omsai@123",
+      "confirmPass": "omsai@123",
+      "TnC": true
+    },
+    {
+      "id": "fd82",
+      "userName": "Sai",
+      "phoneNo": "3333333333",
+      "password": "sai@123",
+      "confirmPass": "sai@123",
+      "TnC": true
+    }
+  ],
+  "mobileData": []
+}

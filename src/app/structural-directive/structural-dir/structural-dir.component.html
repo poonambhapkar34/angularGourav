@@ -1,0 +1,50 @@
+<!-- <p>2. Structural Directives:
+    These directives change the structure of the DOM by adding or removing elements. They typically begin with an asterisk (*) symbol.
+    
+    Common structural directives:
+    
+    *ngIf: Conditionally includes or removes an element from the DOM based on an expression.
+    
+    *ngFor: Repeats an element for each item in a list.
+    
+    *ngSwitch: Conditionally displays one of a set of elements based on an expression.</p> -->
+<!-- <div>
+    Mumbai
+</div>
+<button (click)="hide()">hide</button>
+<p *ngIf="show">Poonam</p>
+<div>{{list}}</div>
+<div *ngFor = "let listItem of list">{{listItem}}</div> -->
+
+<!-- if(true){//execute , if(false){//not execute}} 
+ let a, var b-->
+
+ <!-- <p *ngFor="let items of list1">{{items.name}}
+    {{items.age}}
+ </p>
+
+ <div [ngSwitch]="day">
+    <p *ngSwitchCase="'mon'">mon</p>
+    <p *ngSwitchCase="'tue'">tue</p>
+    <p *ngSwitchCase="'wed'">wed</p>
+    <p *ngSwitchCase="'thu'">thu</p>
+    <p *ngSwitchCase="'fri'">fri</p>
+    <p *ngSwitchCase="'sat'">sat</p>
+    <p *ngSwitchDefault>none</p>
+ </div>
+
+ <br> -->
+ <div class="city-name">Mumbai</div>
+<div style = "color:yellowgreen;font-size: 30px;">Pune</div>
+<div [ngStyle]="{'color': cityName == 'bigCity' ? 'green' : 'red'}">Pune</div>
+<div [ngStyle]="{'color': cityName == 'bigCity' ? 'green' : 'red',
+'font-size':cityName == 'bigCity' ? '30px' : '50px'}">Delhi</div>
+
+<div class="title-container">Welcome User</div>
+<div [class.title-admin-container] = "user == 'admin'"
+[class.title-endUser-container] = "user == 'endUser'"
+[class.title-support-container] = "user == 'support'"> Welcome .... </div>
+
+<div [ngClass]="{ 'highlight': isHighlighted }">ngClass dir</div>
+<br>
+<button (click)="test()">test</button>

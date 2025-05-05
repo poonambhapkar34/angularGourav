@@ -1,0 +1,71 @@
+<div *ngIf="!hideForm">
+    <form [formGroup]="signUpForm">
+        <div>
+            <label>User Name</label>
+            <br>
+            <input type="text" formControlName="userName">
+            <div class="error"
+                *ngIf="signUpForm.get('userName')?.errors?.['required'] && signUpForm.get('userName')?.touched">
+                User Name is required
+            </div>
+            <div class="error"
+                *ngIf="signUpForm.get('userName')?.errors?.['whiteSpaceError'] && !signUpForm.get('userName')?.errors?.['startWithSpaceError']">
+                User Name should not contain more than one white space.
+            </div>
+            <div class="error" *ngIf="signUpForm.get('userName')?.errors?.['startWithSpaceError']">
+                User Name should not start with space.
+            </div>
+        </div>
+        <div>
+            <label>Phone no</label>
+            <br>
+            <input type="text" formControlName="phoneNo">
+            <div class="error"
+                *ngIf="signUpForm.get('phoneNo')?.errors?.['pattern'] && !signUpForm.get('phoneNo')?.errors?.['maxlength'] ">
+                Please enter valid ph no
+            </div>
+            <div class="error" *ngIf="signUpForm.get('phoneNo')?.errors?.['maxlength'] ">
+                Please enter 10 digit ph no only
+            </div>
+        </div>
+        <div>
+            <label>Password</label>
+            <br>
+            <input [type]="showEyeIcon ? 'text' : 'password' " formControlName="password" (blur)="checkPass()">
+            <mat-icon *ngIf="showEyeIcon" class="icon" (click)="eyeIcon()">visibility</mat-icon>
+            <mat-icon *ngIf="!showEyeIcon" class="icon-off" (click)="eyeIcon()">visibility_off</mat-icon>
+        </div>
+        <div>
+            <label>Confirm Password</label>
+            <br>
+            <input type="text" formControlName="confirmPass" (blur)="checkPass()">
+            <div class="error" *ngIf="!isMatch">Password and confirm password shuld equal</div>
+        </div>
+        <div>
+            <input type="checkbox" formControlName="TnC"> Terms and conditions applied
+        </div>
+        <button *ngIf="!userData?.userName" mat-flat-button color="primary" (click)="submit()" [disabled]="!signUpForm.valid">Sign Up</button>
+        <button *ngIf="userData?.userName" mat-flat-button color="primary" (click)="update()" [disabled]="!signUpForm.valid">Update</button>
+    </form>
+</div>
+<br><br>
+<button (click)="reactiveMaterialForm()">Reactive form with material</button>
+
+<div *ngIf="hideForm">
+    <form [formGroup]="reactiveFormInMat">
+        <mat-form-field>
+            <mat-label> Full Name</mat-label>
+            <input type="text" matInput formControlName="FullName" maxlength="10" appCharactersonly>
+            <mat-hint>Please enter Full name</mat-hint>
+            <mat-error>Fullname is required</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label> Email</mat-label>
+            <input type="text" matInput formControlName="email">
+            <mat-hint>Please enter email</mat-hint>
+            <mat-error>email is req</mat-error>
+        </mat-form-field>
+    </form>
+</div>
+<i class="bi bi-apple"></i>

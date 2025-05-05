@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'; // import section
 
-@Component({
+@Component({  //meta of component
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent { //class section
   title = 'myApplication';
 }
+

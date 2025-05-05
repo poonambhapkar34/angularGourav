@@ -1,0 +1,28 @@
+<p>Welcome {{userName}} ...!</p>
+<div>
+    User Address
+    <input type="text" [value]="userAddress">
+</div>
+<div>Event binding
+    <input type="text" (focus)="blurEvent()">
+</div>
+<div>
+    Two way DB
+<input type="text" [(ngModel)]="twoWayDB" (keyup)="dataBinding()">
+</div>
+{{twoWayDB}}
+
+<button (click)="consoleChanges()">console</button>
+<button (click)="Parametrised(10,'poonam',20000)">para</button>
+<!-- 
+Event	Description 
+input	Triggered when the value in the input field changes (every key press).
+change	Triggered when the value changes and the input loses focus.
+focus	Triggered when the input field gains focus.
+blur	Triggered when the input field loses focus.
+keydown	Triggered when a key is pressed down while the input field is focused.
+keyup	Triggered when a key is released while the input field is focused.
+keypress	Triggered when a character key is pressed. (Note: Deprecated in modern usage.)
+2. Two-Way Data Binding
+Description: Two-way data binding allows for the flow of data in both directions: changes in the model automatically update the view, and changes in the view automatically update the model. -->
+

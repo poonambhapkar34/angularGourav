@@ -1,0 +1,38 @@
+.error-msg{
+    color:red;
+    font-size: 15px;
+}
+.main-container{
+    background-color:#a2999c;
+    height: 100vh; //full view port height
+   
+}
+.login-form{
+    margin: auto;
+    border: 1px solid black;  
+    width: 260px;
+    height: auto;
+    min-height: 203px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: cadetblue;
+}
+h2{
+    text-align: center;
+}
+
+.submit-btn{
+    border-radius: 11px;
+    background-color: green;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    padding: 2px 9px;
+    justify-content: center;
+    margin-top: 20px;
+    cursor: pointer;
+    color: white;
+}

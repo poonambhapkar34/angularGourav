@@ -1,0 +1,34 @@
+<div class="main-container">
+    <h2>Login Form</h2>
+    <div class="login-form">
+        <form #loginForm = "ngForm" autocomplete="off" >
+            <div>
+                <label>User Name</label><br>
+                <input type="text" required name="userName" ngModel #userName="ngModel" appCharactersonly>
+                <div class="error-msg" *ngIf = "userName.errors?.['required'] && userName.touched">User name is required</div>
+              <div *ngIf="isValid"  class="error-msg">User Name or password mismatched</div>
+            </div>
+            <div>
+                <label>Password</label><br>
+                <input type="text" name="password" ngModel required #password="ngModel">
+                <div class="error-msg" *ngIf="password.errors?.['required'] && password.touched">Please Enter Password</div>
+                <div *ngIf="isValid"  class="error-msg">User Name or password mismatched</div>
+            </div>
+           
+                <button (click)="submit(loginForm.value)" [disabled]="!loginForm.valid" class="submit-btn">Submit</button>
+           <a routerLink="/signUp" (click)="signUp()">SignUp</a>
+        </form>
+    </div>
+
+<div>
+    Amount1:
+    <!-- <input type="text" (blur)="amount1($event)"> -->
+     <input type="text" [(ngModel)] = "inp1Amount">
+    <br>
+    Amount2:
+    <input type="text" [(ngModel)] = "amount" >
+    <br>
+     <button (click)="multiplication()">Multiplication</button>  {{res}}
+</div>
+
+</div>

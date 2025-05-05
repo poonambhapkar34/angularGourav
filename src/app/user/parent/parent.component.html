@@ -1,0 +1,12 @@
+<p>parent</p>
+<input type="text" [(ngModel)] = "parentData">
+{{data}}
+<br>
+---------------------------------------------------------------
+
+<app-child [dataFromParent] = "parentData" [paraData]="para"
+(dataFromChild)="dataFromChild($event)">
+</app-child>
+
+
+<!-- <button (click)="data()"></button> -->
